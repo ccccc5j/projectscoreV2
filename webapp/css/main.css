@@ -1,0 +1,87 @@
+body {margin:0;padding:0}
+
+#main_box{width:1024px;margin:0 auto;background-color:#F1FCFF; }
+#header{width:1024px;height:114px; background-image: url(../images/header_bg.jpg); background-repeat:no-repeat;float:left}
+#top{width:200px;height:25px; position:relative;margin-left:780px;margin-top:5px;}
+#top .lable{width:65px;height:20px;float:left;} 
+#top a{font-family:"宋体";font-size:12px;color:#679EC4; text-decoration:none;} 
+#top a:hover{color:#ffffff;}
+.name{width:400px;height:25px; position:relative;margin-left:110px;margin-top:50px;float:left}
+.name-box{width:310px;height:15px;padding-top:10px;float:left;font-family:"宋体";font-size:12px;color:#BDF2FF;float:left }
+
+#menu{ margin-left:500px;width:695px;position:relative;height:45px; float:left;margin-top:-20px;list-style:none;}
+#menu ul {padding:0;margin:0px;list-style: none;}
+#menu li {position:relative;float:left; width:77px; background-image:url(../images/li_bg.jpg);margin-left:8px;}
+#menu li ul { position:absolute;display:none;top:28px;left:-8px;}
+#menu li:hover ul, li.over ul {display: block}
+#menu li:hover{background-image:url(../images/li_cur.jpg);}
+#menu ul li{ display:block;width:77px;height:28px; background-repeat:repeat-x;}
+#menu ul li a{display:block;font-size:12px;padding-top:8px;text-decoration: none; font-weight:bold; text-align:center; color:#0F4778}
+#menu ul li a:hover{background-repeat:repeat;padding-top:8px;color:#ffffff;height:20px;}
+
+#main_middle{width:1024px;height:100%;min-height:590px;background-color:#F1FCFF; }
+#m_left{width:229px;height:auto;float:left;min-height:590px;background-color:#F1FCFF;}
+#left_tree{width:220px;float:left;background-color:#F1FCFF;}
+#m_scrollbar{width:9px; height:auto; min-height:590px;float:left;background-color:#6495ED; background-repeat:repeat-y;overflow:hidden}
+.m_right_tree{width:795px; min-height:590px; height:auto;float:left;background-color:#F1FCFF}
+.m_right_tree_close{width:1015px; height:auto;float:left;background-color:#F1FCFF}
+.m_right_notree{width:1024px; height:auto;float:left;background-color:#F1FCFF}
+.layout{margin: 0 auto;width:1024px;background:#F1FCFF;clear: both;}
+
+.div_hoverimg{width:9px;height:400px;cursor:pointer;background:url(../images/scroll_open.gif) no-repeat top left;}
+.divclose_hoverimg{width:9px;height:400px;cursor:pointer;background:url(../images/scroll_close.gif) no-repeat top left;}
+
+.l-head{width:145px;height:17px;padding-top:5px;text-align:center;font-family:"宋体";font-size:12px;font-weight:bold;color:#ffffff; background-color:#66B3FF;}
+.content_wrap {width:220px;height:600px;overflow-y:auto;scrollbar-base-color:#D5EFFE;}
+ul .ztree {margin-top:1px;width:210px;height:100%;overflow-y:auto;overflow-x:auto;}
+
+.right{width:100%;margin:0 auto;margin-top:10px;margin-right:5px}
+.r-head{width:145px;height:17px;padding-top:5px;float:left;margin-left:5px;margin-bottom:0px;color:#ffffff; font-family:"宋体";font-size:12px;font-weight:bold; text-align:center; background-image:url(../images/right_menu_bg.jpg)}
+.site{width:500px;height:25px;float:left;font-family:"宋体";font-size:12px;color:#023457;}
+.site a{font-family:"宋体";font-size:12px;color:#023457; text-decoration:none;}
+.site a:hover{color:red}
+
+.content-div{width:100%;float:left;margin-top:10px;padding:1%;}
+.navi-icon{width:19px;height:19px;float:left;margin-right:10px;margin-left:5px;}
+.explain-box{width:98%;height:25px;float:left;border:solid 1px #CFDEF1;border-top:none; background-color:#D5EFFE;padding:0px;margin-bottom:10px;}
+.explain{width:100%;padding-top:5px;padding-left:5px;float:left;font-family:"宋体";font-size:12px;color:#023457;margin:0}
+.mid-explain-box{width:90%;height:25px;border:solid 1px #CFDEF1;border-top:none; background-color:#D5EFFE;padding:0px;margin-bottom:10px;}
+
+
+.check{float:left;margin-left:5px;}
+.liebiao1{width:40px;margin-left:5px;margin-right:5px;height:15px;padding-top:5px; float:left;font-family:"宋体";font-size:12px;color:#023457;text-align:center}
+.liebiao2{width:120px;margin-left:5px;margin-right:5px;height:15px;padding-top:5px; float:left;font-family:"宋体";font-size:12px;color:#023457;text-align:center}
+.liebiao3{width:150px;margin-left:5px;margin-right:5px;height:15px;padding-top:5px; float:left;font-family:"宋体";font-size:12px;color:#023457;text-align:center}
+.liebiao4{width:80px;margin-left:5px;margin-right:5px;height:15px;padding-top:5px; float:left;font-family:"宋体";font-size:12px;color:#023457;text-align:center}
+#footer{width:100%;height:26px;position:relative; background-image:url(../images/footer_bg.jpg);padding-top:10px}
+#footer .text{font-family:"宋体";font-size:12px;color:#3A78A1;text-align:center}
+
+table.default {border:1px solid #00BFFF;border-collapse:collapse;font-family:"宋体";font-size:12px;color:#023457;text-align:center;}
+table.default td, table.default{padding:2 5 2 5;height:26px;border:solid 1px #00BFFF;}
+table.default tr.title td{font-weight:bold;text-align:center;background:#66B3FF;color:#ffffff;	white-space:nowrap;height:26px;}
+table.default td.item {font-weight:bold;text-align:right;vertical-align:middle;padding-right:4px;}
+span.btnSpan{border: gray 1px solid;display: inline;align:middle;font-weight:bold;color:#2677AE;text-align:right;vertical-align:center;}
+table.default tr.titleTop td{font-weight:bold;text-align:center;background:#ffffff;color:#66B3FF;	white-space:nowrap;height:26px;}
+
+a.navlink {font-family:宋体;font-size:12px;font-weight:bold;letter-spacing:1px;height:14px;color:#023457;padding:1px;background:#EBF4FD;border:1px #00BFFF outset;margin:5px 3px 5px 3px;text-decoration: none;	
+}
+a.navlink:visited {color:#FF5500;}
+a.navlink:active {color:#0044DD;}
+a.navlink:hover {color:#FF5500;}
+ 
+a.comment {font-family:宋体;color:#7A378B;text-decoration: none;}
+a.comment:visited {color:#FF5500;}
+a.comment:active {color:#0044DD;}
+a.comment:hover {color:#FF5500;}
+
+input[type="submit"],input[type="reset"],input[type="button"],.btn {margin-left:5px;margin-right:5px;
+font-size: 14px;font-weight:bolder;padding-left: 5px;padding-right: 5px;padding-top: 3px;padding-bottom: 0px;
+cursor: hand;color: #023457; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA);font-family:"宋体";
+-size:13px;font-weight:bolder; color:#2677AE;border:1px solid #BBCCD6;
+}
+.selectedPage {	border:1px solid #999999;	background:#ffffcc;	color:#000000;	padding:0 3 0 3;}
+.noSelectedPage {padding:0 3 0 3;}
+a.page {	font-size:12px;	font-family: Tahoma, Arial, Helvetica, sans-serif;	text-decoration: none;}
+a.page:link, a.page:visited {	color:#0044DD;	text-decoration:none;}
+a.page:hover, a.page:active {	color:#FF5500;	text-decoration:none;}
+.notNull {color:red;}

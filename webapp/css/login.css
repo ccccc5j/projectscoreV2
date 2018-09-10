@@ -1,0 +1,22 @@
+body 
+{
+	background-image:url(../images/login_bg.jpg);
+	background-repeat:repeat-x
+}
+
+.Login-box{margin:0 auto;width:460px;height:300px; background-image:url(../images/login_bg_image.jpg); 
+background-repeat:no-repeat;margin-top:85px; }
+.Login-textbox{width:265px;height:140px; position:relative;left:175px;top:125px;}
+.lable-box{width:265px;height:35px;float:left}
+.lable{width:60px;height:25px;font-family:"宋体";font-size:14px;font-weight:bold; color:#2677AE;float:left;margin-top:5px; }
+.lable a{font-family:"宋体";font-size:12px;font-weight:bold; color:#2677AE;float:left;margin-top:5px; text-decoration:none}
+.lable a:hover{font-family:"宋体";font-size:12px;font-weight:bold; color:red;float:left;margin-top:5px; }
+input{font-family:"宋体";font-size:16px;width:186px;height:20px;float:left;background-image:url(../images/input_bg.jpg);background-repeat:repeat-x;border:1px solid #BBCCD6;border-top:none;}
+#randomCode{width:90px;}
+.randomCode-img{width:80px;height:30px;float:left;margin-left:20px;}
+#Checkbox{float:left;}
+.check-text{font-family:"宋体";font-size:14px;color:#839FB4;width:32px;height:18px;float:left;margin-top:5px;}
+.loginBtn{width:58px;height:23px;FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA);float:left;font-family:"宋体";font-size:12px;font-weight:bold; color:#2677AE;margin-left:60px;padding-top:2px;border:1px solid #BBCCD6;}
+/* 错误信息 */
+.errorBox {cellspacing:0;  cellpadding:0; width:38%;  border:1px solid #ff0000;	padding:5px;	background:#FFCCCC;}
+.errorMessage {	color:#cc0000;}

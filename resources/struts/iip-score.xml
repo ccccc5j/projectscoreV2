@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="iip-score" extends="iip-default" namespace="/score">	
+		<action name="score" class="javadev.iip.action.score.ScoreAction">
+			<result name="scoreList">score_list.ftl</result>
+			<result name="editScoreView">edit_score_view.ftl</result>
+			<result name="scoreFactorList">score_factor_list.ftl</result>			
+		</action>
+		<action name="project" class="javadev.iip.action.score.ScoreAction">
+			<result name="projectList">project_list.ftl</result>
+			<result name="addProjectView">add_project_view.ftl</result>
+			<result name="queryScoreInfo">query_score_info.ftl</result>
+		</action>		
+	</package>
+</struts>
