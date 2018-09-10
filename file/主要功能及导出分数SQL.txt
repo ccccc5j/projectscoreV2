@@ -1,0 +1,9 @@
+主要功能：
+教师
+添加项目，开放项目，评分，关闭项目，总分
+
+学生
+评分，小组长打组员得分系数
+
+#导出各组平时项目的平均分（不含最终项目，假设最终项目名含'%最终%'）
+SELECT GROUP_ID,avg(SCORE) FROM `project` where PROJECT_NAME not like '%最终%' GROUP BY GROUP_ID ORDER BY GROUP_ID;
