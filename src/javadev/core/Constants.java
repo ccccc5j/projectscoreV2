@@ -34,7 +34,10 @@ public class Constants {
 	
 	/* 记录用户登录前想要访问的地址在Session中的Key */
 	public static final String ORIGINAL_URL = "_ORIGINAL_URL_";
-
+	
+	/* 当前列表页 */
+	public static final String CUR_PAGE_NUM = "_CUR_PAGE_NUM_";
+	
 	/* 缓存相关 */
 	public static final String CACHE_BASE_PATH = "/cache"; //文件缓存目录
 	public static final int COMMON_PERIOD = 60; //内存缓存有效时间，单位为秒，-1表示缓存不失效

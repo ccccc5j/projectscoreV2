@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
 
+import javadev.core.Constants;
 import javadev.core.common.PagingList;
 import javadev.iip.action.BaseAction;
 
@@ -515,7 +516,7 @@ public class ScoreAction extends BaseAction {
 			setResult(ERROR);
 			addMessage("您没有此权限！");
 			addRedirURL("返回", "project!projectList.action");
-		}
+		}		
 		return EXECUTE_RESULT;
 	}
 
@@ -550,13 +551,12 @@ public class ScoreAction extends BaseAction {
 
 			if (result == 1) {// 开放项目
 				setResult(SUCCESS);
-				addMessage("评分成功！");
-				addRedirURL("返回", "score!scoreList.action");
+				addMessage("评分成功！");	
 			} else {
 				setResult(ERROR);
-				addMessage("评分失败！");
-				addRedirURL("返回", "score!scoreList.action");
+				addMessage("评分失败！");			
 			}
+			stayBeforePage();
 		}
 		return EXECUTE_RESULT;
 	}
@@ -596,12 +596,13 @@ public class ScoreAction extends BaseAction {
 				if (result == 1) {// 开放项目
 					setResult(SUCCESS);
 					addMessage("总分成功！");
-					addRedirURL("返回", "project!projectList.action");
+				//	addRedirURL("返回", "project!projectList.action");
 				} else {
 					setResult(ERROR);
 					addMessage("总分失败！");
-					addRedirURL("返回", "project!projectList.action");
+				//	addRedirURL("返回", "project!projectList.action");
 				}
+				stayBeforePage();
 			}
 
 		} else {
@@ -610,6 +611,18 @@ public class ScoreAction extends BaseAction {
 			addRedirURL("返回", "@back");
 		}
 		return EXECUTE_RESULT;
+	}
+
+	public void stayBeforePage() throws NumberFormatException {
+		//停留在以前项目列表的页面
+		String pageNumStr = getSession().get(Constants.CUR_PAGE_NUM).toString();
+		if(pageNumStr !=null&&!"".equals(pageNumStr)){
+			pageNum=Integer.parseInt(pageNumStr);
+			addRedirURL("返回", "score!scoreList.action?pageNum="+pageNum);
+		}else{
+			addRedirURL("返回", "score!scoreList.action");
+		}				
+		getSession().remove(Constants.CUR_PAGE_NUM);
 	}
 
 	// scoreFactorView

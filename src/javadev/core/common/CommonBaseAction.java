@@ -110,6 +110,7 @@ public class CommonBaseAction implements Action {
 
 	public void setPageNum(int pageNum) {
 		this.pageNum = pageNum;
+		getSession().put(Constants.CUR_PAGE_NUM, pageNum);//将页数放入Session
 	}
 
 	public int getPageSize() {
