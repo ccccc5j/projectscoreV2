@@ -615,7 +615,9 @@ public class ScoreAction extends BaseAction {
 
 	public void stayBeforePage() throws NumberFormatException {
 		//停留在以前项目列表的页面
-		String pageNumStr = getSession().get(Constants.CUR_PAGE_NUM).toString();
+		Object curPageObj=getSession().get(Constants.CUR_PAGE_NUM);
+		String pageNumStr = null;
+		if(curPageObj!=null)pageNumStr = getSession().get(Constants.CUR_PAGE_NUM).toString();
 		if(pageNumStr !=null&&!"".equals(pageNumStr)){
 			pageNum=Integer.parseInt(pageNumStr);
 			addRedirURL("返回", "score!scoreList.action?pageNum="+pageNum);
