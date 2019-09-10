@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-merge="true">
+	
+	<bean id="serviceManager" class="javadev.iip.service.ServiceManager" />
+	
+	<!--cj here  	这里是修改配置文件的示例，就像下面那样增加自己的Service 	-->	
+	<bean id="userService" parent="baseTxService">
+		<property name="target">
+			<bean class="javadev.iip.service.UserService" />
+		</property>
+	</bean>
+
+	<bean id="scoreService" parent="baseTxService">
+		<property name="target">
+			<bean class="javadev.iip.service.ScoreService" />
+		</property>
+	</bean>
+
+</beans>

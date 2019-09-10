@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="iip-default" extends="javadev-default">
+		<interceptors>
+			<interceptor name="visitStat" class="javadev.iip.interceptor.VisitStatInterceptor" />
+			<interceptor-stack name="javadevDefaultStack">
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="login" />
+				<!-- cj here 用户访问统计拦截器，暂时屏蔽
+				<interceptor-ref name="visitStat" />
+				-->
+				<interceptor-ref name="exception" />				
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="params" />
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="login" type="redirect">/login_view.action</result>
+		</global-results>
+	</package>
+
+	<include file="struts/iip-ROOT.xml" />
+	<include file="struts/iip-score.xml" />
+</struts>

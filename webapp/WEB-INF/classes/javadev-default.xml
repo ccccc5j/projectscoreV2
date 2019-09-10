@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="javadev-default" extends="struts-default">
+		<result-types>
+			<result-type name="freemarker" class="org.apache.struts2.views.freemarker.FreemarkerResult" default="true" />
+			<result-type name="chart" class="javadev.core.common.ChartResult" />			
+		</result-types>
+
+		<interceptors>
+			<interceptor name="lic" class="javadev.core.common.LicInterceptor" />
+			<interceptor name="login" class="javadev.core.common.LoginInterceptor" />
+			<interceptor name="exception" class="javadev.core.common.ExceptionInterceptor" />
+
+			<interceptor-stack name="javadevDefaultStack">
+				<interceptor-ref name="lic" />
+				<interceptor-ref name="login" />
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="params" />
+			</interceptor-stack>
+
+			<interceptor-stack name="fileUploadStack">
+				<interceptor-ref name="lic" />
+				<interceptor-ref name="login" />
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="params" />
+			</interceptor-stack>
+
+		</interceptors>
+
+		<default-interceptor-ref name="javadevDefaultStack" />
+
+		<global-results>
+			<result name="executeResult" type="redirect">execute_result.action</result>
+			<result name="exception">/common/exception.ftl</result>
+			<result name="jsonResult">
+				<param name="location">/common/json_result.ftl</param>
+				<param name="contentType">text/plain</param>
+			</result>
+			<result name="expired">expired.ftl</result>
+			<result name="disconnect">disconnect.ftl</result>
+			<result name="licFileError">licFileError.ftl</result>
+		</global-results>
+
+		<action name="execute_result" class="javadev.core.common.CommonAnonymousAction">
+			<result name="success">/common/execute_result.ftl</result>
+		</action>
+	</package>
+</struts>
